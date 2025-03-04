@@ -5,7 +5,7 @@ from typing import Generator
 from fastapi.middleware.cors import CORSMiddleware
 
 # Initialize the ApifyClient with your API token
-API_TOKEN = "apify_api_o1iW3ernJlJBO3BZMoLFrDsS4gMgz01hrxDv"  # Replace with your actual Apify API token
+API_TOKEN = "APIFY_KEY"  # Replace with your actual Apify API token
 client = ApifyClient(API_TOKEN)
 
 app = FastAPI()
