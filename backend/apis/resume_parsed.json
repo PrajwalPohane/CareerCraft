@@ -1,0 +1,75 @@
+{
+  "Name": "SHREYAS KEMPWADE",
+  "Experience": [
+    {
+      "Company": "NA",
+      "Position": "NA",
+      "Duration": "NA",
+      "Description": "NA"
+    }
+  ],
+  "Projects": [
+    {
+      "Name": "Driver Drowsiness Detection System Using ML",
+      "TechStack": [
+        "Machine Learning",
+        "CNN",
+        "Attention Mechanisms"
+      ],
+      "Description": "Engineered a real-time driver drowsiness detection system leveraging advanced machine learning algorithms, achieving an accuracy rate of 98.2% by implementing CNN and Attention Mechanisms for precise predictions."
+    },
+    {
+      "Name": "Weather Application",
+      "TechStack": [
+        "HTML",
+        "CSS",
+        "JavaScript"
+      ],
+      "Description": "Engineered a real-time weather application using HTML, CSS, and JavaScript."
+    },
+    {
+      "Name": "Ticket Tracking System",
+      "TechStack": [
+        "Node.js",
+        "MySQL"
+      ],
+      "Description": "Designed and developed backend logic for an industrial ticket-tracking system"
+    }
+  ],
+  "TechnicalSkills": [
+    "Machine Learning",
+    "Neural Networks",
+    "Data Analysis",
+    "DevOps",
+    "Python",
+    "Java",
+    "Node.js",
+    "MySQL",
+    "HTML",
+    "CSS",
+    "React.js",
+    "Docker",
+    "Amazon Web Services"
+  ],
+  "Education": [
+    {
+      "Institution": "Vishwakarma Institute of Information Technology, Pune",
+      "Duration": "NA",
+      "Qualification": "B.Tech in Computer Science Engineering (Artificial Intelligence and Machine Learning)",
+      "Percentage": "8.8 CGPA"
+    }
+  ],
+  "Certifications": [
+    {
+      "Name": "IBM DevOps Certificate"
+    },
+    {
+      "Name": "Deep Learning Certificate"
+    }
+  ],
+  "Publications": [
+    {
+      "Name": "NA"
+    }
+  ]
+}
