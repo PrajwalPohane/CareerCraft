@@ -8,7 +8,7 @@ from typing import List, Dict
 from groq import Groq
 
 # Initialize Groq API Client
-api_key = "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"  # Replace with your actual API key
+api_key = "YOUR_GROQ_API_KEY"  # Replace with your actual API key
 client = Groq(api_key=api_key)
 
 app = FastAPI()
