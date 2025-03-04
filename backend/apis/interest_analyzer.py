@@ -7,7 +7,7 @@ from groq import Groq
 router = APIRouter()
 
 # Initialize Groq API Client
-api_key = "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"
+api_key = "YOUR_GROQ_API_KEY"
 client = Groq(api_key=api_key)
 
 class QuestionResponse(BaseModel):
