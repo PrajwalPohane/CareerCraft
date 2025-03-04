@@ -1,0 +1,450 @@
+.cp-container {
+  position: fixed;
+  top: 4rem; /* Increased from 4rem to 5rem to create more space below navbar */
+  left: 0;
+  right: 0;
+  bottom: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.header-container1 {
+  position: sticky;
+  top: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 100%;
+  padding: 1rem 4rem 1rem 2rem;
+  z-index: 10;
+  margin-top: 1rem;
+}
+
+.header-container1 h1 {
+  margin: 0 0 0.5rem 0;
+  white-space: nowrap;
+  font-size: 2.2rem;
+  color: #ffffff;
+  min-width: fit-content;
+}
+
+.header-container1 p {
+  margin: 0;
+  color: #fff;
+  font-size: 1.1rem;
+  opacity: 0.9;
+}
+
+.cp-content {
+  flex: 1;
+  width: 100%;
+  overflow-y: auto;
+  padding: 1rem;
+}
+
+.cp-form {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  background: rgba(255, 255, 255, 0.1);
+  padding: 3rem 4rem;
+  border-radius: 15px;
+  backdrop-filter: blur(10px);
+}
+
+/* Style the scrollbar */
+.cp-form::-webkit-scrollbar {
+  width: 8px;
+}
+
+.cp-form::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.cp-form::-webkit-scrollbar-thumb {
+  background-color: rgba(255, 255, 255, 0.3);
+  border-radius: 4px;
+}
+
+.form-group {
+  margin-top: 2rem;
+}
+
+.form-field {
+  margin-bottom: 2rem;
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+
+.form-field label {
+  min-width: 200px;
+  flex-shrink: 0;
+  margin-bottom: 0;
+  color: white;
+  font-size: 1.3rem;
+  font-weight: 500;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+  font-family: 'Josefin Sans', sans-serif;
+}
+
+/* Remove MUI-specific styles */
+.form-field input {
+  flex: 1;
+  padding: 1.2rem 1.5rem;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.9);
+  color: rgb(255, 255, 255);
+  font-size: 1.2rem;
+  font-family: 'Josefin Sans', sans-serif;
+  transition: all 0.3s ease;
+}
+
+.form-field input:hover {
+  background: rgba(255, 255, 255, 1);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  transform: translateY(-2px);
+}
+
+.form-field input:focus {
+  outline: none;
+  background: rgba(255, 255, 255, 1);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+  transform: translateY(-2px);
+  border-color: rgba(255, 255, 255, 0.5);
+}
+
+.form-field input::placeholder {
+  color: rgba(0, 0, 0, 0.5);
+  font-style: italic;
+  opacity: 1;
+}
+
+/* Remove these MUI-specific styles */
+.MuiAutocomplete-root,
+.MuiAutocomplete-popper,
+.MuiAutocomplete-option,
+.MuiOutlinedInput-root {
+  display: none;
+}
+
+/* Add animation for form fields */
+.form-field {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInUp 0.5s forwards;
+}
+
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Add delay for each form field */
+.form-field:nth-child(1) { animation-delay: 0.1s; }
+.form-field:nth-child(2) { animation-delay: 0.2s; }
+.form-field:nth-child(3) { animation-delay: 0.3s; }
+.form-field:nth-child(4) { animation-delay: 0.4s; }
+.form-field:nth-child(5) { animation-delay: 0.5s; }
+
+.loading {
+  text-align: center;
+  padding: 20px;
+  color: white;
+  font-size: 1.2rem;
+}
+
+.error {
+  color: #ff4444;
+  background: rgba(255, 68, 68, 0.1);
+  padding: 15px;
+  border-radius: 8px;
+  margin: 20px 0;
+  text-align: center;
+}
+
+.result-container {
+  margin-top: 30px;
+  padding: 20px;
+  background: rgba(255, 255, 255, 0.95);
+  border-radius: 12px;
+  color: #333;
+  max-height: 400px; /* Limit result height */
+  overflow-y: auto; /* Make result scrollable */
+  scrollbar-width: thin;
+  scrollbar-color: rgba(0, 0, 0, 0.3) transparent;
+}
+
+.result-container::-webkit-scrollbar {
+  width: 8px;
+}
+
+.result-container::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.result-container::-webkit-scrollbar-thumb {
+  background-color: rgba(0, 0, 0, 0.3);
+  border-radius: 4px;
+}
+
+.result-container h2 {
+  color: #333;
+  margin-bottom: 20px;
+  font-size: 1.8rem;
+}
+
+.result-container pre {
+  white-space: pre-wrap;
+  font-family: 'Josefin Sans', sans-serif;
+  line-height: 1.6;
+  font-size: 1.1rem;
+}
+
+.submit-btn {
+  margin-top: 30px;
+  padding: 15px 30px;
+  background: linear-gradient(135deg, #007bff, #0056b3);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 1.2rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.submit-btn:hover:not(:disabled) {
+  background: linear-gradient(135deg, #0056b3, #004094);
+  transform: translateY(-2px);
+}
+
+.submit-btn:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+
+/* Add these styles to your existing cp.css */
+
+.form-select {
+  flex: 1;
+  padding: 1.2rem 1.5rem;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 12px;
+  background: transparent;
+  color: white;
+  font-size: 1.2rem;
+  font-family: 'Josefin Sans', sans-serif;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
+.form-select option {
+  background: rgba(30, 30, 30, 0.9);
+  color: white;
+  padding: 12px;
+}
+
+.form-select::-ms-expand {
+  display: none;
+}
+
+.form-select:hover {
+  background: rgba(255, 255, 255, 1);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+.form-textarea {
+  flex: 1;
+  padding: 1.2rem 1.5rem;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.9);
+  color: black;
+  font-size: 1.2rem;
+  font-family: 'Josefin Sans', sans-serif;
+  min-height: 100px;
+  resize: vertical;
+}
+
+.required {
+  color: #ff4444;
+  margin-left: 4px;
+}
+
+.form-field label {
+  color: white;
+  display: flex;
+  align-items: center;
+}
+
+.form-input, .form-select, .form-textarea {
+  flex: 1;
+  padding: 1.2rem 1.5rem;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 12px;
+  background: transparent;
+  color: white;
+  font-size: 1.2rem;
+  font-family: 'Josefin Sans', sans-serif;
+  transition: all 0.3s ease;
+}
+
+.form-input::placeholder, 
+.form-textarea::placeholder {
+  color: rgba(255, 255, 255, 0.9) !important;
+  font-style: italic;
+  opacity: 1;
+}
+
+.form-select::placeholder {
+  color: rgba(255, 255, 255, 0.9) !important;
+  font-style: italic;
+  opacity: 1;
+}
+
+.form-input:hover, 
+.form-textarea:hover,
+.form-select:hover {
+  background: rgba(255, 255, 255, 0.1);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+.form-input:focus, 
+.form-textarea:focus, 
+.form-select:focus {
+  outline: none;
+  background: rgba(255, 255, 255, 0.15);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+  border-color: rgba(255, 255, 255, 0.5);
+}
+
+.initial-analysis {
+  margin-bottom: 2rem;
+  padding-bottom: 2rem;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.additional-questions {
+  padding-top: 1rem;
+}
+
+.additional-questions h3 {
+  color: #333;
+  margin-bottom: 1rem;
+}
+
+.additional-questions p {
+  color: #666;
+  margin-bottom: 2rem;
+}
+
+.guidance-sections {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.guidance-sections .section {
+  background: rgba(255, 255, 255, 0.5);
+  padding: 1.5rem;
+  border-radius: 8px;
+}
+
+.guidance-sections h3 {
+  color: #333;
+  margin-bottom: 1rem;
+  font-size: 1.4rem;
+}
+
+.guidance-content {
+  background: rgba(255, 255, 255, 0.95);
+  border-radius: 12px;
+  padding: 2rem;
+  margin-top: 1rem;
+}
+
+.recommendations {
+  white-space: pre-wrap;
+  font-family: 'Josefin Sans', sans-serif;
+  line-height: 1.6;
+  font-size: 1.1rem;
+  color: #333;
+}
+
+.recommendations h3 {
+  color: #0056b3;
+  margin: 1.5rem 0 1rem;
+}
+
+.recommendations ul {
+  margin: 1rem 0;
+  padding-left: 2rem;
+}
+
+.recommendations li {
+  margin-bottom: 0.5rem;
+}
+
+/* Update scrollbar styles */
+.cp-content::-webkit-scrollbar {
+  width: 8px;
+}
+
+.cp-content::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.cp-content::-webkit-scrollbar-thumb {
+  background-color: rgba(255, 255, 255, 0.3);
+  border-radius: 4px;
+}
+
+/* Add mobile responsiveness */
+@media (max-width: 768px) {
+  .header-container {
+    flex-direction: column;
+    padding: 1rem;
+    gap: 1rem;
+  }
+
+  .cp-content {
+    padding: 0.5rem;
+  }
+
+  .cp-form {
+    padding: 2rem 1rem;
+  }
+}
+
+.form-input {
+  flex: 1;
+  padding: 1.2rem 1.5rem;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 12px;
+  background: transparent !important; /* Force transparency */
+  color: white;
+  font-size: 1.2rem;
+  font-family: 'Josefin Sans', sans-serif;
+  transition: all 0.3s ease;
+}
+
+.form-input:hover, 
+.form-input:focus {
+  background: transparent !important;
+  border-color: rgba(255, 255, 255, 0.5);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+}
+
+.form-input::placeholder {
+  color: rgba(255, 255, 255, 0.6);
+  font-style: italic;
+  opacity: 1;
+}
