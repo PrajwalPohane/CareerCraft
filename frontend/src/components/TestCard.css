@@ -1,0 +1,132 @@
+.test-card {
+  background: rgba(30, 30, 45, 0.95);
+  border-radius: 15px;
+  padding: 2rem;
+  margin: 1rem 0;
+  margin-bottom: 5rem;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  position: relative;
+  z-index: 10;
+}
+
+.test-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.5rem;
+}
+
+.test-header h3 {
+  color: white;
+  margin: 0;
+  font-size: 1.2rem;
+}
+
+.question-counter {
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 0.9rem;
+}
+
+.question-text {
+  color: white;
+  font-size: 1.1rem;
+  margin-bottom: 1.5rem;
+}
+
+.options-container {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+}
+
+.option {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.option:hover {
+  background: rgba(255, 255, 255, 0.1);
+  transform: translateX(5px);
+}
+
+.option.selected {
+  background: rgba(54, 153, 255, 0.2);
+  border-color: rgba(54, 153, 255, 0.5);
+}
+
+.option-label {
+  background: rgba(255, 255, 255, 0.1);
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  color: white;
+  font-weight: 500;
+}
+
+.option-text {
+  color: white;
+  font-size: 1rem;
+}
+
+.next-button {
+  margin-top: 1.5rem;
+  width: 100%;
+  padding: 1rem;
+  background: rgba(54, 153, 255, 0.9);
+  border: none;
+  border-radius: 8px;
+  color: white;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+  z-index: 20;
+}
+
+.next-button:hover:not(:disabled) {
+  background: rgba(54, 153, 255, 1);
+  transform: translateY(-2px);
+}
+
+.next-button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.progress-bar {
+  margin-top: 1rem;
+  height: 4px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 2px;
+  overflow: hidden;
+}
+
+.progress-fill {
+  height: 100%;
+  background: rgba(54, 153, 255, 0.9);
+  transition: width 0.3s ease;
+}
+
+.loading {
+  color: white;
+  text-align: center;
+  padding: 2rem;
+}
+
+.chat-input-container {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 30;
+  display: flex;
+  gap: 0.8rem;
+  padding: 1rem;
+  background-color: rgba(0, 0, 0, 0.2);
+} 
