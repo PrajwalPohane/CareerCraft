@@ -1,0 +1,46 @@
+.home-container {
+  padding: 2rem;
+  text-align: center;
+  height: 100vh; /* Ensure the container takes the full height of the viewport */
+  width: 100%; /* Ensure the container takes the full width of the viewport */
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start; /* Align items to the top */
+  align-items: center; /* Center items horizontally */
+  color: white; /* Change text color to white */
+  margin: 0; /* Remove margin to eliminate gaps */
+  box-sizing: border-box; /* Include padding and border in the element's total width and height */
+  overflow: hidden; /* Prevent container from scrolling */
+}
+
+.home-container h1 {
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
+  margin-top: 1rem; /* Reduced from 2rem */
+  color: white; /* Change the color to white */
+}
+
+.home-container p {
+  font-size: 1.2rem;
+  color: white; /* Change the color to white */
+}
+
+.card-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-top: 1rem;
+  padding-bottom: 1rem;
+  overflow-y: auto;
+  max-height: calc(100vh - 250px);
+  width: 100%;
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; /* IE and Edge */
+}
+
+/* Hide scrollbar for Chrome, Safari and Opera */
+.card-container::-webkit-scrollbar {
+  display: none;
+}
